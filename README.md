@@ -1,4 +1,5 @@
 Modelo de Cliente, Pagamento e Entrega
+
 1️⃣ Objetivo
 
 O objetivo deste documento é refinar o modelo de dados de um sistema de vendas, incluindo:
