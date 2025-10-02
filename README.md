@@ -13,6 +13,7 @@ Registro e controle de entregas, incluindo status e código de rastreio.
 O resultado será um modelo que atende requisitos de negócio, mantém integridade de dados e facilita consultas e relatórios.
 
 2️⃣ Modelagem de Clientes
+
 Entidades e Atributos
 Entidade	Atributos Principais	Observações
 Cliente	id_cliente (PK)	Identificador único da conta
@@ -32,6 +33,7 @@ Se tipo_cliente = PJ, então cpf_cnpj deve conter um CNPJ válido.
 Não permitir que a mesma conta tenha informações de PF e PJ ao mesmo tempo.
 
 3️⃣ Modelagem de Pagamentos
+
 Entidades e Atributos
 Entidade	Atributos Principais	Observações
 FormaPagamento	id_pagamento (PK)	Identificador único da forma de pagamento
@@ -48,6 +50,7 @@ Cada forma de pagamento deve estar linkada a apenas um cliente.
 Não permitir duplicidade de forma de pagamento idêntica para o mesmo cliente (ex.: mesmo cartão registrado duas vezes).
 
 4️⃣ Modelagem de Entregas
+
 Entidades e Atributos
 Entidade	Atributos Principais	Observações
 Entrega	id_entrega (PK)	Identificador único da entrega
@@ -76,6 +79,7 @@ Cliente → Pedido: 1:N
 Um cliente pode ter vários pedidos registrados.
 
 6️⃣ Exemplo de Estrutura em SQL
+
 -- Tabela Cliente
 CREATE TABLE Cliente (
     id_cliente INT PRIMARY KEY,
@@ -107,6 +111,7 @@ CREATE TABLE FormaPagamento (
 );
 
 7️⃣ Observações Finais
+
 
 A separação de cliente, pagamento e entrega garante flexibilidade para adicionar novas funcionalidades futuramente (como múltiplos pedidos por cliente, promoções, históricos de pagamento).
 
